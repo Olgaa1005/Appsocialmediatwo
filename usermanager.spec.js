@@ -20,16 +20,11 @@ describe('UserManager Class', () => {
     userManager.createUser('testUser', 'password123');
     expect(() => userManager.createUser('testUser', 'password456')).toThrowError('User already exists');
   });
-
-
   
   test('should throw an error when creating a user with missing username or password', () => {
     expect(() => userManager.createUser('', 'password123')).toThrowError('Username and password are required');
     expect(() => userManager.createUser('testUser', '')).toThrowError('Username and password are required');
   });
-
-
-
 
 
   test('should log in a user with correct credentials', () => {

@@ -39,7 +39,7 @@ describe('User Class with ORM functionality', () => {
   });
 
   test('should throw an error when creating a user from invalid JSON', () => {
-    const invalidJson = { username: 'testUser' }; // Missing password
+    const invalidJson = { username: 'testUser' }; 
     expect(() => User.fromJSON(invalidJson)).toThrowError('Invalid JSON object for User');
   });
 
